@@ -3,7 +3,7 @@ use num_integer::Integer;
 use num_traits::{One, Zero, ToPrimitive};
 
 pub fn extra_strong_lucas(n: &BigUint) -> bool {
-    // 1. 参数选择优化
+    // 参数选择优化
     let mut p = 3u32;
     let d_val = loop {
         let d = p * p - 4;
