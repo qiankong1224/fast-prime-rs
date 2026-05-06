@@ -1,0 +1,23 @@
+[package]
+name = "bpsw"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+num-bigint = "0.4.6"
+num-integer = "0.1.46"
+num-traits = "0.2.19"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+num-prime = "0.4.4"
+glass_pumpkin = "1.1.0"
+# dashu 需要 rand feature 来支持素数检测的底数生成
+dashu = { version = "0.4.2", features = ["rand"] }
+
+rug = { version = "1.24", features = ["integer"] }
+
+
+[[bench]]
+name = "prime_bench"
+harness = false
